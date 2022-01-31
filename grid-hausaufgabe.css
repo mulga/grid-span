@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  background-color: #e6b8dd;
+  padding: 10px;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.box {
+  background-color: green;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.box:hover {
+  transition: all 300ms;
+  box-shadow: -2px -2px 27px 9px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: -2px -2px 27px 9px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: -2px -2px 27px 9px rgba(0, 0, 0, 0.27);
+  z-index: 1;
+}
+
+.box:nth-child(odd) {
+  background-color: orange;
+}
+
+.box:nth-child(4) {
+  grid-column: span 2;
+}
+
+.box:nth-child(7) {
+  grid-column: span 2;
+}
